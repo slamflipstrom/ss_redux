@@ -8,7 +8,7 @@ class WelcomeComponent extends Component {
 
     this.state = {
       game: [
-        playerCount = 0
+        { playerCount: 0 }
       ]
     }
   }
