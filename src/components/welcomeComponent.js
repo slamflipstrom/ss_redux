@@ -7,9 +7,9 @@ class WelcomeComponent extends Component {
     this.onGameStart = this.onGameStart.bind(this);
 
     this.state = {
-      game: [
-        { playerCount: 0 }
-      ]
+      game: {
+         playerCount: 0 
+        }
     }
   }
   onGameStart(playerCount) {
