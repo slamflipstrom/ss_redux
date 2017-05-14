@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import GameComponent from './components/gameComponent';
+import React, { Component } from "react";
+import GameComponent from "./components/gameComponent";
 
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
 class App extends Component {
   render() {

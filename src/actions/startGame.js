@@ -1,7 +1,7 @@
-export const addPlayer = (playerCount) => {
-  console.log("start game with player:", playerCount);
-    return {
-      type: 'ADD_PLAYER',
-      playerCount
-    };
-}
+export const addPlayer = playerCount => {
+  console.log("start game with playerCount:", playerCount);
+  return {
+    type: "ADD_PLAYER",
+    playerCount: 1
+  };
+};
