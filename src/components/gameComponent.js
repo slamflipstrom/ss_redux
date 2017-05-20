@@ -12,7 +12,7 @@ class GameComponent extends Component {
   render() {
     return (
       <div className="Game">
-        <WelcomeComponent addPlayer={this.props.action.addPlayer} />
+        <WelcomeComponent playerCount={this.props.playerCount} addPlayer={this.props.action.addPlayer} />
       </div>
     );
   }

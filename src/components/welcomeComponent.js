@@ -5,21 +5,17 @@ class WelcomeComponent extends Component {
     super(props);
 
     this.addPlayer = this.addPlayer.bind(this);
-
-    this.state = {
-      game: {
-        playerCount: 0
-      }
-    };
   }
+
   addPlayer(playerCount) {
     this.props.addPlayer(playerCount);
   }
 
   render() {
-    const PlayerCount = this.state.game.playerCount;
+    const PlayerCount = this.props.playerCount;
     return (
       <div>
+        <h2>Number of players: {PlayerCount}</h2>
         <button onClick={() => this.addPlayer(PlayerCount)}>Add Player</button>
       </div>
     );
