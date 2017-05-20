@@ -12,7 +12,6 @@ class GameComponent extends Component {
   render() {
     return (
       <div className="Game">
-        <p>Player Count:</p>
         <WelcomeComponent addPlayer={this.props.action.addPlayer} />
       </div>
     );
