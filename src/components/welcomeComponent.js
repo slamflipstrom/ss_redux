@@ -11,12 +11,16 @@ class WelcomeComponent extends Component {
     this.props.addPlayer(playerCount);
   }
 
+  removePlayer(playerCount) {
+    this.props.removePlayer(playerCount);
+  }
   render() {
     const PlayerCount = this.props.playerCount;
     return (
       <div>
         <p>Player Count: {PlayerCount}</p>
         <button onClick={() => this.addPlayer(PlayerCount)}>Add Player</button>
+        <button onClick={() => this.removePlayer(PlayerCount)}>Remove Player</button>
       </div>
     );
   }

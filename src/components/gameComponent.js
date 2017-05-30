@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import * as gameActions from "../actions/startGame";
 
+import * as gameActions from "../actions/startGame";
 import WelcomeComponent from "./welcomeComponent";
 
 class GameComponent extends Component {
@@ -16,6 +15,7 @@ class GameComponent extends Component {
       <div className="Game">
         <WelcomeComponent
           addPlayer={this.props.action.addPlayer}
+          removePlayer={this.props.action.removePlayer}
           playerCount={this.props.playerCount}
         />
       </div>
