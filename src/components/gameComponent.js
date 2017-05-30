@@ -1,7 +1,9 @@
 import React, { Component } from "react";
+
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import * as gameActions from "../actions/startGame";
+
 import WelcomeComponent from "./welcomeComponent";
 
 class GameComponent extends Component {
@@ -12,12 +14,15 @@ class GameComponent extends Component {
   render() {
     return (
       <div className="Game">
-        <WelcomeComponent addPlayer={this.props.action.addPlayer} />
+        <WelcomeComponent
+          addPlayer={this.props.action.addPlayer}
+          playerCount={this.props.playerCount}
+        />
       </div>
     );
   }
 }
-function mapStateToProps(state, props) {
+function mapStateToProps(state) {
   return {
     playerCount: state.game.playerCount
   };
