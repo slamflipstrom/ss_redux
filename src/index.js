@@ -2,24 +2,27 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+// React Router
+import { Router, Route, IndexRoute } from "react-router";
+
 // Redux
 import { Provider } from "react-redux";
-import configureStore from "./store";
+import store, { history } from "./store";
 
 // import CSS
 import "./index.css";
 
-// import App
 import App from "./App";
+import GameComponent from "./components/gameComponent";
 
-// import React Router deps
-import { BrowserRouter as Router, Route, Link } from "react-router";
-
-const store = configureStore();
-
-ReactDOM.render(
+const router = (
   <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById("root")
+    <Router history={history}>
+      <Route path="/" component={App}>
+        <IndexRoute component={GameComponent} />
+      </Route>
+    </Router>
+  </Provider>
 );
+
+ReactDOM.render(router, document.getElementById("root"));
