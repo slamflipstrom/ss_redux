@@ -12,7 +12,11 @@ class WelcomeComponent extends Component {
   }
 
   removePlayer(playerCount) {
-    this.props.removePlayer(playerCount);
+    if (playerCount <= 0) {
+      return;
+    } else {
+      this.props.removePlayer(playerCount);
+    }
   }
   render() {
     const PlayerCount = this.props.playerCount;

@@ -10,13 +10,13 @@ export const defaultState = {
   }
 };
 
-const browserHistory = createBrowserHistory();
-
 const store = createStore(
   rootReducer,
   defaultState,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
+
+const browserHistory = createBrowserHistory();
 
 export const history = syncHistoryWithStore(browserHistory, store);
 
