@@ -18,9 +18,7 @@ import GameComponent from "./components/gameComponent";
 const router = (
   <Provider store={store}>
     <Router history={history}>
-      <Route path="/" component={App}>
-        <IndexRoute component={GameComponent} />
-      </Route>
+      <Route path="/" component={App} />
     </Router>
   </Provider>
 );
