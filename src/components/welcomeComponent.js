@@ -8,11 +8,15 @@ class WelcomeComponent extends Component {
   }
 
   addPlayer(playerCount) {
-    this.props.addPlayer(playerCount);
+    if (playerCount > 5) {
+      return;
+    } else {
+      this.props.addPlayer(playerCount);
+    }
   }
 
   removePlayer(playerCount) {
-    if (playerCount <= 0) {
+    if (playerCount < 1) {
       return;
     } else {
       this.props.removePlayer(playerCount);
