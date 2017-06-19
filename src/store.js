@@ -6,6 +6,7 @@ import rootReducer from "./reducers";
 
 export const defaultState = {
   game: {
+    phase: 0,
     playerCount: 0
   }
 };

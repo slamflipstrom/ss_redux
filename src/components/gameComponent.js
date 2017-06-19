@@ -17,6 +17,7 @@ class GameComponent extends Component {
           addPlayer={this.props.action.addPlayer}
           removePlayer={this.props.action.removePlayer}
           playerCount={this.props.playerCount}
+          startGame={this.props.action.startGame}
         />
       </div>
     );
@@ -24,6 +25,7 @@ class GameComponent extends Component {
 }
 function mapStateToProps(state) {
   return {
+    phase: state.game.phase,
     playerCount: state.game.playerCount
   };
 }

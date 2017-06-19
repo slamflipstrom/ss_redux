@@ -11,3 +11,9 @@ export const removePlayer = playerCount => {
     playerCount
   };
 };
+
+export const startGame = () => {
+  return {
+    type: "START_GAME"
+  };
+};
