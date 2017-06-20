@@ -3,6 +3,7 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
 import * as gameActions from "../actions/startGame";
+// import * as actionCreators from "../actions/actionCreators";
 import WelcomeComponent from "./welcomeComponent";
 
 class GameComponent extends Component {
@@ -11,13 +12,14 @@ class GameComponent extends Component {
     this.state = {};
   }
   render() {
+    const { action, playerCount } = this.props;
     return (
       <div className="Game">
         <WelcomeComponent
-          addPlayer={this.props.action.addPlayer}
-          removePlayer={this.props.action.removePlayer}
-          playerCount={this.props.playerCount}
-          startGame={this.props.action.startGame}
+          addPlayer={action.addPlayer}
+          removePlayer={action.removePlayer}
+          playerCount={playerCount}
+          startGame={action.startGame}
         />
       </div>
     );

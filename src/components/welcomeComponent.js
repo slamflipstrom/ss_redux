@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class WelcomeComponent extends Component {
   constructor(props) {
@@ -30,14 +31,18 @@ class WelcomeComponent extends Component {
   }
 
   render() {
-    const PlayerCount = this.props.playerCount;
+    const { playerCount } = this.props;
     return (
       <div>
-        <p>Player Count: {PlayerCount}</p>
-        <button onClick={() => this.addPlayer(PlayerCount)}>Add Player</button>
-        <button onClick={() => this.removePlayer(PlayerCount)}>Remove Player</button>
+        <p>Player Count: {playerCount}</p>
+        <button onClick={() => this.addPlayer(playerCount)}>Add Player</button>
+        <button onClick={() => this.removePlayer(playerCount)}>Remove Player</button>
         <br />
-        <button onClick={() => this.startGame(PlayerCount)}>Start Game</button>
+        <Link to={"/bid"}>
+          <button onClick={() => this.startGame(playerCount)}>
+            Start Game
+          </button>
+        </Link>
       </div>
     );
   }
