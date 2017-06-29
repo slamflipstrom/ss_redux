@@ -3,7 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 // React Router
-import { Router, Route, IndexRoute } from "react-router";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // Redux
 import { Provider } from "react-redux";
@@ -13,14 +13,16 @@ import store, { history } from "./store";
 import "./index.css";
 
 import App from "./App";
-import GameComponent from "./components/gameComponent";
+import WelcomeComponent from "./components/welcomeComponent";
 import BiddingComponent from "./components/biddingComponent";
 
 const router = (
   <Provider store={store}>
     <Router history={history}>
-      <Route path="/" component={App} />
-      <Route path="/bid" component={BiddingComponent} />
+      <Switch>
+        <Route exact path="/" component={App} />
+        <Route path="/bid" component={BiddingComponent} />
+      </Switch>
     </Router>
   </Provider>
 );
