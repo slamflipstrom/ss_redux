@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 class WelcomeComponent extends Component {
   constructor(props) {
-    super(props);
+    super();
   }
 
   addPlayer(playerCount) {

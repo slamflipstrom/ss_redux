@@ -3,7 +3,6 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
 import * as gameActions from "../actions/startGame";
-// import * as actionCreators from "../actions/actionCreators";
 import WelcomeComponent from "./welcomeComponent";
 
 class GameComponent extends Component {

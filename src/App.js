@@ -3,7 +3,6 @@ import logo from "./logo.svg";
 
 // import Components
 import GameComponent from "./components/gameComponent";
-import WelcomeComponent from "./components/gameComponent";
 
 // import CSS
 import "./App.css";
