@@ -10,6 +10,7 @@ class GameComponent extends Component {
     super(props);
     this.state = {};
   }
+
   render() {
     const { action, playerCount } = this.props;
     return (
@@ -24,12 +25,14 @@ class GameComponent extends Component {
     );
   }
 }
+
 function mapStateToProps(state) {
   return {
     phase: state.game.phase,
     playerCount: state.game.playerCount
   };
 }
+
 function mapDispatchToProps(dispatch) {
   return {
     action: bindActionCreators(gameActions, dispatch)

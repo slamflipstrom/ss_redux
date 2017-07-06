@@ -13,7 +13,6 @@ import store, { history } from "./store";
 import "./index.css";
 
 import App from "./App";
-import WelcomeComponent from "./components/welcomeComponent";
 import BiddingComponent from "./components/biddingComponent";
 
 const router = (
