@@ -1,17 +1,11 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
+import AddPlayerComponent from "./addPlayerComponent";
+
 class WelcomeComponent extends Component {
   constructor(props) {
     super();
-  }
-
-  addPlayer(playerCount) {
-    if (playerCount > 5) {
-      return;
-    } else {
-      this.props.addPlayer(playerCount);
-    }
   }
 
   removePlayer(playerCount) {
@@ -35,7 +29,7 @@ class WelcomeComponent extends Component {
     return (
       <div>
         <p>Player Count: {playerCount}</p>
-        <button onClick={() => this.addPlayer(playerCount)}>Add Player</button>
+        <AddPlayerComponent addPlayer={this.props.addPlayer} playerCount={playerCount} />
         <button onClick={() => this.removePlayer(playerCount)}>Remove Player</button>
         <br />
         <Link to={"/bid"}>
